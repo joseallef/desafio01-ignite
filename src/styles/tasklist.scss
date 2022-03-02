@@ -3,19 +3,19 @@ section.task-list {
   border-radius: 1rem;
   
   margin-top: -10rem;
-  padding: 70px 60px;
+  padding: 70px 0px;
   
   filter: drop-shadow(0px 24px 64px rgba(0, 0, 0, 0.06));
   
   header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     
     h2 {
       color: var(--text-title);
-      font-size: 2.25rem;
+      font-size: 1.5rem;
     }
 
     .input-group {
@@ -29,9 +29,8 @@ section.task-list {
       input {
         flex: 1;
         background: var(--background);
-        border: 0;
         color: var(--text);
-        padding: 12px 24px;
+        padding: 10px 2rem;
         
         border-radius: 8px;
         border: 0;
@@ -42,7 +41,6 @@ section.task-list {
       }
 
       button {
-        font-weight: 600;
         border-radius: 8px;
         border: 0;
         background: var(--green);
@@ -61,8 +59,10 @@ section.task-list {
     }
   }
 
+
+
   main {
-    margin-top: 3rem;
+    margin: 30px;
 
     ul {
       list-style: none;
@@ -158,4 +158,25 @@ section.task-list {
       }
     } 
   }
+  @media screen and (min-width: 600px) {
+    header {
+      flex-direction: row;
+  
+      h2 {
+        font-size: 2.25rem;
+      }
+      
+      .input-group {
+        input {
+          padding: 12px 24px;
+        }
+      } 
+    }
+  
+    main {
+      margin: 3rem 2rem;   
+    }
+  
+  }
 }
+
